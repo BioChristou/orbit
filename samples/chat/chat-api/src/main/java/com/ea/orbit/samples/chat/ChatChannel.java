@@ -1,4 +1,4 @@
-<!--
+/*
 Copyright (C) 2015 Electronic Arts Inc.  All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -24,25 +24,13 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
 ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
--->
+*/
 
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Orbit Chat Sample</title>
-		<link rel="stylesheet" href="./src/css/reset.css" />
-		<link rel="stylesheet" href="./src/css/orbit.chat.css" />
-	</head>
+package com.ea.orbit.samples.chat;
 
-	<body>
-		<script src="./src/lib/jquery-2.1.4.min.js"></script>
-		<script src="./src/lib/react.js"></script>
-		<script src="./src/lib/react-dom.js"></script>
-		<script src="./src/lib/babel.browser.min.js"></script>
-		<script src="./src/app/orbit.chat.jsx" type="text/babel"></script>
+import com.ea.orbit.actors.Actor;
 
-		<div id="container">
-			Loading...
-		</div>
-	</body>
-</html>
+public interface ChatChannel extends Actor
+{
+
+}

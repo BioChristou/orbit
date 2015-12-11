@@ -28,13 +28,9 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 package com.ea.orbit.samples.chat;
 
+import com.ea.orbit.actors.runtime.AbstractActor;
 
-import com.ea.orbit.actors.ActorObserver;
-import com.ea.orbit.actors.annotation.OneWay;
-import com.ea.orbit.concurrent.Task;
-
-public interface ChatObserver extends ActorObserver
+public class ChatChannelActor extends AbstractActor implements ChatChannel
 {
-    @OneWay
-    Task<Void> receiveMessage(ChatMessageDto message);
+
 }

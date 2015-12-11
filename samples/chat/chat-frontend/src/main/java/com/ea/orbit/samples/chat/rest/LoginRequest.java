@@ -26,46 +26,19 @@
  THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.ea.orbit.samples.chat;
+package com.ea.orbit.samples.chat.rest;
 
-import java.io.Serializable;
-import java.util.Date;
-
-public class ChatMessageDto implements Serializable
+public class LoginRequest
 {
-	private static final long serialVersionUID = 1L;
-	private Date when;
-    private String sender;
-    private String message;
+    private String username;
 
-    public Date getWhen()
+    public String getUsername()
     {
-        // wasteful clone just to keep code analysers happy
-        return new Date(when.getTime());
+        return username;
     }
 
-    public void setWhen(final Date when)
+    public void setUsername(String username)
     {
-        this.when = new Date(when.getTime());
-    }
-
-    public String getSender()
-    {
-        return sender;
-    }
-
-    public void setSender(final String sender)
-    {
-        this.sender = sender;
-    }
-
-    public String getMessage()
-    {
-        return message;
-    }
-
-    public void setMessage(final String message)
-    {
-        this.message = message;
+        this.username = username;
     }
 }

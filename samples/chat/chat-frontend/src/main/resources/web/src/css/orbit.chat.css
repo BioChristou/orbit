@@ -26,23 +26,85 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-package com.ea.orbit.samples.chat;
-
-import com.ea.orbit.actors.Actor;
-import com.ea.orbit.actors.annotation.OneWay;
-import com.ea.orbit.concurrent.Task;
-
-import java.util.List;
-
-public interface Chat extends Actor
+body
 {
+  font:12px arial;
+  color: #222;
+  text-align:center;
+  padding:35px;
+}
 
-    @OneWay
-    Task<Void> say(ChatMessageDto message);
+form, p, span
+{
+    margin:0;
+    padding:0;
+  }
 
-    Task<Boolean> join(ChatObserver observer);
+input
+{
+  font:12px arial;
+}
 
-    Task<Boolean> leave(ChatObserver observer);
+a
+{
+  color:#0000FF;
+  text-decoration:none;
+}
 
-    Task<List<ChatMessageDto>> getHistory(int messageCount);
+a:hover
+{
+  text-decoration:underline;
+}
+
+#container
+{
+  margin:0 auto;
+  background:#EBF4FB;
+  width:504px;
+  border:1px solid #ACD8F0;
+  padding-bottom: 5px;
+}
+
+#loginForm
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#menu
+{
+  padding:12.5px 25px 12.5px 25px;
+}
+
+#chatBox
+{
+  text-align:left;
+  margin:0 auto;
+  margin-bottom:25px;
+  padding:10px;
+  background:#fff;
+  height:270px;
+  width:430px;
+  border:1px solid #ACD8F0;
+  overflow:auto;
+}
+
+.clearStyle
+{
+  clear: both;
+}
+
+.errorRed
+{
+    color: #FF0000;
+}
+
+.welcomeMessage
+{
+  float:left;
+}
+
+.logoutMessage
+{
+  float:right;
 }
